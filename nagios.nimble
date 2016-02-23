@@ -6,7 +6,7 @@ description   = "My nagios checks and a library for using them"
 license       = "MIT"
 srcDir        = "src"
 binDir        = "bin"
-bin           = @["checkhttp", "checkirc"]
+bin           = @["checkhttp", "checkirc", "checkimvuonlineusers"]
 
 # Dependencies
 
