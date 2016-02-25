@@ -7,8 +7,6 @@ commandline:
   argument url, string
   exitoption "help", "h", helptext
 
-try:
+withStatus:
   discard url.getContent(timeout = 300_000)
   okay url & " responds to HTTP/S GET requests"
-except:
-  critical getCurrentExceptionMsg()

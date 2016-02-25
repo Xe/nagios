@@ -13,7 +13,7 @@ if host == nil and port == 0:
 
 var client = newIRC(host, port=port.Port, nick="nagios-" & $randomInt(9001))
 
-try:
+withStatus:
   client.connect()
 
   while true:
@@ -28,5 +28,3 @@ try:
           okay host & " " & $port & " is UP and IRC connections work"
       else:
         critical "Cannot connect to " & host & " " & $port
-except:
-  critical getCurrentExceptionMsg()
